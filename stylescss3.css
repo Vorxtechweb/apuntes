@@ -29,7 +29,7 @@ html, body{
     backface-visibility: hidden;
     border-radius: 10px;
     overflow:scroll;
-    transition: .9s;
+    transition: 1.5s;
 }
 
 .card .front{
