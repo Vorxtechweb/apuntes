@@ -1,0 +1,103 @@
+html, body{
+    
+    background: #111111;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.padrecartas{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+}
+
+.card{
+    position: relative;
+    width: 280px;
+    height: 350px;
+    margin: 30px;
+}
+
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow:scroll;
+    transition: .9s;
+}
+
+.card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px black;
+    border: 5px solid white;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.card .front h3{
+    position: absolute;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(255, 255, 255);
+    padding: 0px;
+    color: #0C9CE5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px black;
+    border: 5px solid #0C9CE5;
+}
+
+.card .back .link {
+    border-top: solid 1px #0C9CE5;
+    height: 50px;
+    line-height: 50px;
+
+}
+
+.card .back .link a {
+    color: #0C9CE5;
+
+}
+
+.card .back h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #0C9CE5;
+    text-shadow: 1px 0 #111111, -1px 0 #111111, 0 1px #111111, 0 -1px #111111,
+    1px 1px #111111, -1px -1px #111111, 1px -1px #111111, -1px 1px #111111;
+}
+
+.card .back p {
+    color: black;
+    text-decoration: none;
+
+}
+.card:hover .front{
+    transform:  perspective(600px) rotateY(180deg);
+
+}
+
+.card:hover .back{
+    transform:  perspective(600px) rotateY(360deg);
+
+}

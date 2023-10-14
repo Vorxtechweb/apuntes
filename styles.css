@@ -1,0 +1,50 @@
+html, body{
+background: #111111;
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+
+
+.parent{
+display: flex;
+flex-wrap: wrap;
+gap: 80px;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+
+}
+.item{
+border: 5px solid;
+border-color: white;
+width: 225px;
+height: 330px;
+text-align: center;
+transition: .4s ease-in-out;
+border-radius: 10px;
+
+}
+.item:hover{
+transform: scale(1.2);
+}
+
+
+
+
+.imagen{
+    width: 225px;
+    height: 330px;
+    object-fit: fixed;
+}
+h1{
+    position: relative ;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
